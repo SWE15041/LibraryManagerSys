@@ -6,5 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository     //@Repository用于标注数据访问组件，即DAO组件；
 public interface UserRepositpry extends JpaRepository<User,Long> {
-        User findFirstByUsernameAndPassword(String name, String password);
+        User findFirstByUsername(String username);
+//        User findFirstByPassword(String password);
+//        boolean findFirstByUsername(String username);
+
 }
